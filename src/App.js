@@ -1,6 +1,6 @@
-import './App.css';
-import Timer from './components/timer';
-import './components/timer.sass'
+import './App.sass';
+import Timer from './components/Timer';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
           initSeconds={30}
       /> 
  
+      <NavBar />
     </div>
 
   );
