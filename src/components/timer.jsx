@@ -8,7 +8,8 @@ const Timer = (props) => {
   const [hourInput, setHourInput] = useState(initHour.toString());
   const [minuteInput, setMinuteInput] = useState(initMinute.toString());
   const [secondInput, setSecondInput] = useState(initSecond.toString());
-  const [isRunning, setIsRunning] = useState(false); // Step 1: State for timer running
+  const [isRunning, setIsRunning] = useState(false);
+  const [rotationDegree, setRotationDegree] = useState(0); // Rotation degree for the circle line
 
   useEffect(() => {
     let myInterval;
@@ -21,7 +22,7 @@ const Timer = (props) => {
           if (minutes === 0) {
             if (hours === 0) {
               clearInterval(myInterval);
-              setIsRunning(false); // Stop the timer when it reaches 00:00:00
+              setIsRunning(false);
             } else {
               setHours(hours - 1);
               setMinutes(59);
@@ -32,6 +33,11 @@ const Timer = (props) => {
             setSeconds(59);
           }
         }
+        // Calculate the rotation degree based on the remaining time
+        const totalSeconds = hours * 3600 + minutes * 60 + seconds;
+        const remainingSeconds = totalSeconds - 1;
+        const degree = (remainingSeconds / totalSeconds) * 360;
+        setRotationDegree(degree);
       }, 1000);
     } else {
       clearInterval(myInterval);
@@ -55,7 +61,7 @@ const Timer = (props) => {
   };
 
   const handleStartStop = () => {
-    setIsRunning(!isRunning); // Step 3: Toggle timer state
+    setIsRunning(!isRunning);
   };
 
   const handleSubmit = (event) => {
@@ -66,6 +72,10 @@ const Timer = (props) => {
     setHours(newHours);
     setMinutes(newMinutes);
     setSeconds(newSeconds);
+  };
+
+  const circleStyle = {
+    transform: `rotate(${rotationDegree}deg)`,
   };
 
   return (
@@ -103,7 +113,10 @@ const Timer = (props) => {
             <input type="submit" value="Submit" />
           </form>
         </div>
-        <div>
+        <div className="circle-container">
+          <div className="circle">
+            <div className="line" style={circleStyle}></div>
+          </div>
           <button onClick={handleStartStop}>
             {isRunning ? "Stop" : "Start"} Timer
           </button>
