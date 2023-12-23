@@ -1,3 +1,23 @@
+# PROJECT PLAN
+
+## mission
+Our mission is to provide a space for anyone to heal trauma by offering free yin yoga and additonal resources proven to aide in the release of stagnant emotions in the body.
+
+## vision
+To support as many people as possible with their emotional health
+
+
+
+
+
+
+
+
+
+
+
+
+# ______________________________________________________________________________________________________________________________________________
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

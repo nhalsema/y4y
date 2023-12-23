@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { NavLink } from "react-router-dom";
 import './FlyingToasters.css'
 
 function FlyingToasters() {
@@ -66,13 +65,6 @@ function FlyingToasters() {
     //addEventListener("keydown", (ev) => enableKey(ev.key), { once: true });
 
     setInterval(() => update(), 25);
-
-    return (
-
-        <div>
-        </div>
-
-    )
 };
 
 export default FlyingToasters;

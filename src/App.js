@@ -1,20 +1,13 @@
-import './App.sass';
-import Timer from './components/Timer';
-// import NavBar from './components/NavBar';
-import FlyingToasters from './components/FlyingToasters';
+import FlyingToasters from './components/background/FlyingToasters';
+import MissionVision from './components/MissionVision';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <FlyingToasters />
-      <h1>hello world</h1>
-      <Timer
-          initMinute={0}
-          initSeconds={30}
-      /> 
- 
+      <MissionVision />
 
-    </div>
+     </div>
 
   );
 }
