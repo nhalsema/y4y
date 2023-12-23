@@ -1,0 +1,48 @@
+html,
+body {
+    background-color: #111;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    .title {
+        left: auto;
+        transform: scale(0.5);
+    }
+}
+
+.toaster {
+    --flap-animation: flap 0.2s steps(4) infinite alternate;
+    --size: 64px;
+
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    background-image: url("https://manzdev.github.io/twitch-after-dark/assets/toaster.gif");
+    transform: translate(var(--x, 80vw), var(--y, 10vh));
+    animation: var(--flap-animation);
+
+    /* , fly 25s linear infinite; */
+}
+
+.toast {
+    --size: 64px;
+
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    background-image: url("https://manzdev.github.io/twitch-after-dark/assets/toast.gif");
+    transform: translate(var(--x, 80vw), var(--y, 10vh));
+}
+
+@keyframes flap {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -256px;
+    }
+}
