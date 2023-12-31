@@ -9,7 +9,6 @@ function App() {
       <Homepage />
       {/* <StyleToggle /> */}
      </div>
-
   );
 }
 

@@ -6,7 +6,8 @@ Our mission is to provide a space for anyone to heal trauma by offering free yin
 ## vision
 To support as many people as possible with their emotional health
 
-
+project plan:
+https://past-wealth-8f8.notion.site/Yin-for-Yangsters-b72c91de7950404aa0b9d24b87aada62?pvs=4 
 
 
 
