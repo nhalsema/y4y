@@ -4,12 +4,12 @@ import './FlyingToasters.css'
 function FlyingToasters() {
     const MAX_WIDTH = 100;
     const MAX_HEIGHT = 100;
-    const ELEMENTS_MAX = 50;
+    const ELEMENTS_MAX = 30;
     const ELEMENTS = ["toaster", "toast"];
 
     const moveElement = (element) => {
         const elementSpeed = parseInt(element.getAttribute("data-speed"));
-        const speed = elementSpeed / 10;
+        const speed = elementSpeed / 25;
 
         let x = parseFloat(element.style.getPropertyValue("--x")) - speed;
         let y = parseFloat(element.style.getPropertyValue("--y")) + speed;

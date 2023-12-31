@@ -1,12 +1,13 @@
+import './App.scss'
 import FlyingToasters from './components/background/FlyingToasters';
-import MissionVision from './components/MissionVision';
+import Homepage from './components/Homepage';
 
 function App() {
   return (
     <div>
       <FlyingToasters />
-      <MissionVision />
-
+      <Homepage />
+      {/* <StyleToggle /> */}
      </div>
 
   );
